@@ -1,4 +1,4 @@
-package bond.modelCrud;
+package com.bond.modelCrud;
 
 import java.util.*;
 
@@ -6,8 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.bond.api.*;
-
-import bond.interfaces.*;
+import com.bond.interfaces.*;
 
 import static com.bond.api.ProviderReturnCode.*;
 

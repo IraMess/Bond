@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import static com.bond.api.ProviderApiConstants.*;
 
 import com.bond.api.*;
-import bond.interfaces.*;
+import com.bond.interfaces.*;
 
 @RestController ("/provider")
 @ImportResource("bond.xml")

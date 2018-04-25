@@ -1,4 +1,4 @@
-package bond.modelCrud;
+package com.bond.modelCrud;
 
 import org.springframework.data.repository.CrudRepository;
 

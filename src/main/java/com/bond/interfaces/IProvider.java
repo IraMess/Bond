@@ -1,4 +1,4 @@
-package bond.interfaces;
+package com.bond.interfaces;
 
 import com.bond.api.*;
 
