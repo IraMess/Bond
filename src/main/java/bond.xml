@@ -21,9 +21,9 @@
 		<constructor-arg ref="mongo" />
 		<constructor-arg name="databaseName" value="bond" />
 	</bean>
-	<context:annotation-config />
-	<mongo:repositories base-package="bond.modelCrud"></mongo:repositories>
-	<bean class="bond.modelCrud.BondCrud">
+		<context:annotation-config />
+		<mongo:repositories base-package="com.bond.modelCrud"></mongo:repositories>
+	<bean class="com.bond.modelCrud.BondCrud">
 	</bean>
 
 </beans>
