@@ -1,4 +1,4 @@
-package com.bond.api;
+package com.bond.api.dto;
 
 import java.io.Serializable;
 

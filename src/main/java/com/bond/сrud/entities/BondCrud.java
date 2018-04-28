@@ -1,14 +1,17 @@
-package com.bond.modelCrud;
+package com.bond.сrud.entities;
+
+import static com.bond.api.enums.ProviderReturnCode.*;
 
 import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.bond.api.*;
+import com.bond.api.dto.AddressDto;
+import com.bond.api.dto.ProviderDto;
+import com.bond.api.enums.ProviderReturnCode;
 import com.bond.interfaces.*;
-
-import static com.bond.api.ProviderReturnCode.*;
+import com.bond.сrud.repository.ProvidersRepository;
 
 
 @Repository

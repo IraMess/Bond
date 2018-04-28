@@ -1,12 +1,13 @@
-package com.bond.appl;
+package com.bond.webService;
+
+import static com.bond.api.ProviderApiConstants.*;
 
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.context.annotation.*;
 import org.springframework.web.bind.annotation.*;
 
-import static com.bond.api.ProviderApiConstants.*;
-
-import com.bond.api.*;
+import com.bond.api.dto.ProviderDto;
+import com.bond.api.enums.ProviderReturnCode;
 import com.bond.interfaces.*;
 
 @RestController ("/provider")

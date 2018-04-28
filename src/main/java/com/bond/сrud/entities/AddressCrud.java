@@ -1,6 +1,6 @@
-package com.bond.modelCrud;
+package com.bond.сrud.entities;
 
-import com.bond.api.*;
+import com.bond.api.dto.AddressDto;
 
 public class AddressCrud {
 	String city;

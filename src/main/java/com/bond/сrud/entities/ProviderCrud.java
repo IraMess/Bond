@@ -1,11 +1,11 @@
-package com.bond.modelCrud;
+package com.bond.сrud.entities;
 
 import java.util.*;
 
 import org.springframework.data.annotation.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.bond.api.ProviderDto;
+import com.bond.api.dto.ProviderDto;
 
 @Document(collection = "providers")
 public class ProviderCrud {
