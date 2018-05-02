@@ -14,7 +14,6 @@ import com.bond.interfaces.*;
 import com.bond.сrud.entities.ProviderCrud;
 import com.bond.сrud.repository.ProvidersRepository;
 
-
 @Repository
 public class BondCrud implements IProvider {
 

@@ -3,7 +3,6 @@ package com.bond.webService;
 import static com.bond.api.ProviderApiConstants.*;
 
 import org.springframework.beans.factory.annotation.*;
-import org.springframework.context.annotation.*;
 import org.springframework.web.bind.annotation.*;
 
 import com.bond.api.dto.ProviderDto;
@@ -11,7 +10,6 @@ import com.bond.api.enums.ProviderReturnCode;
 import com.bond.interfaces.*;
 
 @RestController ("/provider")
-@ImportResource("bond.xml")
 public class ProviderController {
 
 	@Autowired
