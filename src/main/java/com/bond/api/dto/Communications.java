@@ -1,6 +1,6 @@
 package com.bond.api.dto;
 
-public class Comunications {
+public class Communications {
 
 	String telephone;
 	String skype;
@@ -8,10 +8,10 @@ public class Comunications {
 	String whatsApp;
 	String telegram;
 
-	public Comunications() {
+	public Communications() {
 	}
 
-	public Comunications(String telephone, String skype, String viber, String whatsApp, String telegram) {
+	public Communications(String telephone, String skype, String viber, String whatsApp, String telegram) {
 		this.telephone = telephone;
 		this.skype = skype;
 		this.viber = viber;

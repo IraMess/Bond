@@ -2,20 +2,20 @@ package com.bond.api.dto;
 
 public class ScheduleDto {
 
-	DaySchedualDto[] days;
+	DayScheduleDto[] days;
 
 	public ScheduleDto() {
 	}
 
-	public ScheduleDto(DaySchedualDto[] days) {
+	public ScheduleDto(DayScheduleDto[] days) {
 		this.days = days;
 	}
 
-	public DaySchedualDto[] getDays() {
+	public DayScheduleDto[] getDays() {
 		return days;
 	}
 
-	public void setDays(DaySchedualDto[] days) {
+	public void setDays(DayScheduleDto[] days) {
 		this.days = days;
 	}
 

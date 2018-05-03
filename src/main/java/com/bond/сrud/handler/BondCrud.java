@@ -18,11 +18,11 @@ import com.bond.сrud.repository.ProvidersRepository;
 public class BondCrud implements IProvider {
 
 	@Autowired
-	ProvidersRepository prividersRepository;
+	ProvidersRepository providersRepository;
 
 	@Override
 	public ProviderDto getProvider(String email) {
-		return toProviderDto(prividersRepository.findById(email).get());
+		return toProviderDto(providersRepository.findById(email).get());
 	}
 
 	private ProviderDto toProviderDto(ProviderCrud providerCrud) {
@@ -40,10 +40,10 @@ public class BondCrud implements IProvider {
 
 	@Override
 	public ProviderReturnCode addProvider(ProviderDto providerDto) {
-		if (prividersRepository.findById(providerDto.getEmail()) != null) {
+		if (providersRepository.findById(providerDto.getEmail()) != null) {
 			return PROVIDER_ALREADY_EXISTS;
 		}
-		prividersRepository.save(new ProviderCrud(providerDto));
+		providersRepository.save(new ProviderCrud(providerDto));
 		return OK;
 	}
 

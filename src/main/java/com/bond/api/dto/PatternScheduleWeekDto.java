@@ -1,6 +1,6 @@
 package com.bond.api.dto;
 
-public class PatternSchedualeWeekDto {
+public class PatternScheduleWeekDto {
 	DayOfWeekDto sunday;
 	DayOfWeekDto monday;
 	DayOfWeekDto tuesday;
@@ -11,10 +11,10 @@ public class PatternSchedualeWeekDto {
 	
 	int timeInterval;
 
-	public PatternSchedualeWeekDto() {
+	public PatternScheduleWeekDto() {
 	}
 
-	public PatternSchedualeWeekDto(DayOfWeekDto sunday, DayOfWeekDto monday, DayOfWeekDto tuesday,
+	public PatternScheduleWeekDto(DayOfWeekDto sunday, DayOfWeekDto monday, DayOfWeekDto tuesday,
 			DayOfWeekDto wednesday, DayOfWeekDto thursday, DayOfWeekDto friday, DayOfWeekDto saturday,
 			int timeInterval) {
 		this.sunday = sunday;
