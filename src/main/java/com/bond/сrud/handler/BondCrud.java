@@ -7,8 +7,10 @@ import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.bond.api.dto.AddressDto;
-import com.bond.api.dto.ProviderDto;
+import com.bond.api.dto.client.ClientDto;
+import com.bond.api.dto.common.AddressDto;
+import com.bond.api.dto.provider.ProviderDto;
+import com.bond.api.dto.schedule.ScheduleDto;
 import com.bond.api.enums.ProviderReturnCode;
 import com.bond.interfaces.*;
 import com.bond.сrud.entities.ProviderCrud;
@@ -45,6 +47,54 @@ public class BondCrud implements IProvider {
 		}
 		providersRepository.save(new ProviderCrud(providerDto));
 		return OK;
+	}
+
+	@Override
+	public ProviderReturnCode deleteProvider(Long idProvider) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ProviderReturnCode updateProvider(ProviderDto providerDto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ProviderReturnCode createSchedule(ScheduleDto schedule) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ScheduleDto getSchedule() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ProviderReturnCode updateSchedule(ScheduleDto schedule) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ProviderReturnCode deleteSchedule() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Iterable<ClientDto> getClients() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ClientDto getClient() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

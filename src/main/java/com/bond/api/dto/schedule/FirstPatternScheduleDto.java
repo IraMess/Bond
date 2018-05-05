@@ -1,8 +1,9 @@
-package com.bond.api.dto;
+package com.bond.api.dto.schedule;
 
 import java.util.*;
 
-public class PatternScheduleDto {
+//This pattern is received from provider once, at first time.
+public class FirstPatternScheduleDto {
 
 	boolean sunday;
 	boolean monday;
@@ -20,10 +21,10 @@ public class PatternScheduleDto {
 	int timeInterval;
 	
 	
-	public PatternScheduleDto() {
+	public FirstPatternScheduleDto() {
 	}
 
-	public PatternScheduleDto(boolean sunday, boolean monday, boolean tuesday, boolean wednesday, boolean thursday,
+	public FirstPatternScheduleDto(boolean sunday, boolean monday, boolean tuesday, boolean wednesday, boolean thursday,
 			boolean friday, boolean saturday, TimeZone startDay, TimeZone endDay, int timeBreak, TimeZone breakStart,
 			int timeInterval) {
 		this.sunday = sunday;

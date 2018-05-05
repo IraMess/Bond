@@ -1,7 +1,9 @@
-package com.bond.api.dto;
+package com.bond.api.dto.provider;
 
 import java.io.Serializable;
 import java.util.*;
+
+import com.bond.api.dto.common.AddressDto;
 
 public class ProviderDto implements Serializable{
 	/**

@@ -1,8 +1,8 @@
 package com.bond.interfaces;
 
-import com.bond.api.dto.ClientDto;
-import com.bond.api.dto.ProviderDto;
-import com.bond.api.dto.ScheduleDto;
+import com.bond.api.dto.client.ClientDto;
+import com.bond.api.dto.provider.ProviderDto;
+import com.bond.api.dto.schedule.ScheduleDto;
 import com.bond.api.enums.ProviderReturnCode;
 
 public interface IProvider {

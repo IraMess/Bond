@@ -5,7 +5,7 @@ import java.util.*;
 import org.springframework.data.annotation.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.bond.api.dto.ProviderDto;
+import com.bond.api.dto.provider.ProviderDto;
 
 @Document(collection = "providers")
 public class ProviderCrud {

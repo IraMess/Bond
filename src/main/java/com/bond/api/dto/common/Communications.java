@@ -1,4 +1,4 @@
-package com.bond.api.dto;
+package com.bond.api.dto.common;
 
 public class Communications {
 

@@ -5,7 +5,7 @@ import static com.bond.api.ProviderApiConstants.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.web.bind.annotation.*;
 
-import com.bond.api.dto.ProviderDto;
+import com.bond.api.dto.provider.ProviderDto;
 import com.bond.api.enums.ProviderReturnCode;
 import com.bond.interfaces.*;
 

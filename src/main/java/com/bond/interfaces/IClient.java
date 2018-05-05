@@ -1,8 +1,8 @@
 package com.bond.interfaces;
 
-import com.bond.api.dto.ClientDto;
-import com.bond.api.dto.ProviderDto;
-import com.bond.api.dto.RecordDto;
+import com.bond.api.dto.client.ClientDto;
+import com.bond.api.dto.provider.ProviderDto;
+import com.bond.api.dto.schedule.RecordProviderDto;
 import com.bond.api.enums.ClientReturnCode;
 
 public interface IClient {
@@ -14,9 +14,9 @@ public interface IClient {
 	ProviderDto getProvider(String email);
 	Iterable<ProviderDto> getAllProviders(String category);
 	
-	ClientReturnCode addRecord(RecordDto record);
+	ClientReturnCode addRecord(RecordProviderDto record);
 	ClientReturnCode deleteRecord();
-	Iterable<RecordDto> getAllRecords();
+	Iterable<RecordProviderDto> getAllRecords();
 
 	ClientReturnCode addVote(String vote);
 	ClientReturnCode addComment(String comment);

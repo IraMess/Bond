@@ -1,4 +1,6 @@
-package com.bond.api.dto;
+package com.bond.api.dto.schedule;
+
+import com.bond.api.dto.common.Communications;
 
 public class ScheduleClientDto {
 

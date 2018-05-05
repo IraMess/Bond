@@ -1,16 +1,16 @@
-package com.bond.api.dto;
+package com.bond.api.dto.schedule;
 
-import java.util.*;
+import java.time.*;
 
-public class BreaksDto {
+public class BreakDto {
 
 	int timeBreak;
-	TimeZone breakStart;
+	ZonedDateTime breakStart;
 
-	public BreaksDto() {
+	public BreakDto() {
 	}
 
-	public BreaksDto(int timeBreak, TimeZone breakStart) {
+	public BreakDto(int timeBreak, ZonedDateTime breakStart) {
 		super();
 		this.timeBreak = timeBreak;
 		this.breakStart = breakStart;
@@ -24,11 +24,11 @@ public class BreaksDto {
 		this.timeBreak = timeBreak;
 	}
 
-	public TimeZone getBreakStart() {
+	public ZonedDateTime getBreakStart() {
 		return breakStart;
 	}
 
-	public void setBreakStart(TimeZone breakStart) {
+	public void setBreakStart(ZonedDateTime breakStart) {
 		this.breakStart = breakStart;
 	}
 }
