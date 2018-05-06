@@ -17,7 +17,7 @@ public interface IClient {
 	ClientReturnCode deleteRecord();
 	Iterable<RecordProviderDto> getAllRecords();
 
-	ClientReturnCode addVote(String vote);
+	ClientReturnCode addVote(int vote);
 	ClientReturnCode addComment(String comment);
 	
 }
