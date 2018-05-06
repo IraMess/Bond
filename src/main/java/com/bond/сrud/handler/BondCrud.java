@@ -1,8 +1,10 @@
 package com.bond.сrud.handler;
 
-import static com.bond.api.enums.ProviderReturnCode.*;
+import static com.bond.api.enums.ProviderReturnCode.OK;
+import static com.bond.api.enums.ProviderReturnCode.PROVIDER_ALREADY_EXISTS;
 
-import java.util.*;
+import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -10,14 +12,16 @@ import org.springframework.stereotype.Repository;
 import com.bond.api.dto.client.ClientDto;
 import com.bond.api.dto.common.AddressDto;
 import com.bond.api.dto.provider.ProviderDto;
+import com.bond.api.dto.schedule.PatternScheduleDto;
 import com.bond.api.dto.schedule.ScheduleDto;
 import com.bond.api.enums.ProviderReturnCode;
-import com.bond.interfaces.*;
+import com.bond.interfaces.ICommon;
+import com.bond.interfaces.IProvider;
 import com.bond.сrud.entities.ProviderCrud;
 import com.bond.сrud.repository.ProvidersRepository;
 
 @Repository
-public class BondCrud implements IProvider {
+public class BondCrud implements IProvider, ICommon {
 
 	@Autowired
 	ProvidersRepository providersRepository;
@@ -62,30 +66,6 @@ public class BondCrud implements IProvider {
 	}
 
 	@Override
-	public ProviderReturnCode createSchedule(ScheduleDto schedule) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ScheduleDto getSchedule() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ProviderReturnCode updateSchedule(ScheduleDto schedule) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ProviderReturnCode deleteSchedule() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public Iterable<ClientDto> getClients() {
 		// TODO Auto-generated method stub
 		return null;
@@ -93,6 +73,42 @@ public class BondCrud implements IProvider {
 
 	@Override
 	public ClientDto getClient() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ProviderReturnCode createPatternSchedule(ScheduleDto schedule) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PatternScheduleDto getPatternSchedule() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ProviderReturnCode updatePatternSchedule(ScheduleDto schedule) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ProviderReturnCode deletePatternSchedule() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ProviderReturnCode clearPatternSchedule() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ProviderReturnCode editSchedule(ScheduleDto schedule) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -14,10 +14,12 @@ public class ProviderController {
 
 	@Autowired
 	IProvider bonds;
+	@Autowired
+	ICommon commons;
 
 	@GetMapping
 	ProviderDto showProvider(@RequestParam(name = EMAIL) String email) {
-		return bonds.getProvider(email);
+		return commons.getProvider(email);
 	}
 
 	@PostMapping
