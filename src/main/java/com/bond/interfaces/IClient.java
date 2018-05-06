@@ -11,8 +11,7 @@ public interface IClient {
 	ClientReturnCode updateClient(ClientDto client);
 	ClientReturnCode deleteClient();
 	
-	ProviderDto getProvider(String email);
-	Iterable<ProviderDto> getAllProviders(String category);
+	Iterable<ProviderDto> getAllProviders(Long idClient);
 	
 	ClientReturnCode addRecord(RecordProviderDto record);
 	ClientReturnCode deleteRecord();
