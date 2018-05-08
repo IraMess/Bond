@@ -5,7 +5,6 @@ import java.util.*;
 import org.springframework.data.annotation.*;
 import org.springframework.data.mongodb.core.mapping.*;
 
-import com.bond.api.dto.common.*;
 import com.bond.api.dto.provider.*;
 
 @Document(collection = "providers")
@@ -16,7 +15,7 @@ public class ProviderCrud {
 	String name;
 	List<String> services;
 	AddressCrud address;
-	Map<String, String> communications;
+	CommunicationsCrud communications;
 
 	public ProviderCrud() {
 	}
@@ -26,16 +25,8 @@ public class ProviderCrud {
 		this.profession = providerDto.getProfession();
 		this.name = providerDto.getName();
 		this.services = providerDto.getServices();
-
 		this.address = new AddressCrud(providerDto.getAddress());
-		@SuppressWarnings("unchecked")
-		Class<Communications> comun = (Class<Communications>) providerDto.getCommunications().getClass();
-		Arrays.stream(comun.getDeclaredFields()).forEach(key -> {
-			try {
-				communications.put(key.toString(), comun.getDeclaredField(key.toString()).toString());
-			} catch (Exception e) {
-			}
-		});
+		this.communications = new CommunicationsCrud(providerDto.getCommunications());
 	}
 
 	public String getProfession() {
@@ -70,11 +61,11 @@ public class ProviderCrud {
 		this.address = address;
 	}
 
-	public Map<String, String> getCommunications() {
+	public CommunicationsCrud getCommunications() {
 		return communications;
 	}
 
-	public void setCommunications(Map<String, String> communications) {
+	public void setCommunications(CommunicationsCrud communications) {
 		this.communications = communications;
 	}
 

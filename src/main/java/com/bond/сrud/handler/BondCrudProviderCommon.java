@@ -35,14 +35,19 @@ public class BondCrudProviderCommon implements IProvider, ICommon {
 		String street = providerCrud.getAddress().getStreet();
 		String building = providerCrud.getAddress().getBuilding();
 		AddressDto address = new AddressDto(city, street, building);
-		Map<String, String> communications = providerCrud.getCommunications();
+		String telephone = providerCrud.getCommunications().getTelephone();
+		String skype = providerCrud.getCommunications().getSkype();
+		String viber = providerCrud.getCommunications().getViber();
+		String whatsApp = providerCrud.getCommunications().getWhatsApp();
+		String telegram = providerCrud.getCommunications().getTelegram();
+		CommunicationsDto communications = new CommunicationsDto(telephone, skype, viber, whatsApp, telegram);
 		String email = providerCrud.getEmail();
 		return new ProviderDto(profession, name, services, address, communications, email);
 	}
 
 	@Override
 	public ProviderReturnCode addProvider(ProviderDto providerDto) {
-		if (providersRepository.findById(providerDto.getEmail()) != null) {
+		if (providersRepository.findById(providerDto.getEmail()).isPresent()) {
 			return PROVIDER_ALREADY_EXISTS;
 		}
 		providersRepository.save(new ProviderCrud(providerDto));

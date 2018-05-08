@@ -1,8 +1,8 @@
-package com.bond.api.dto.common;
+package com.bond.сrud.entities;
 
-import java.util.Map;
+import com.bond.api.dto.common.*;
 
-public class Communications {
+public class CommunicationsCrud {
 
 	String telephone;
 	String skype;
@@ -10,15 +10,15 @@ public class Communications {
 	String whatsApp;
 	String telegram;
 
-	public Communications() {
+	public CommunicationsCrud() {
 	}
 
-	public Communications(Map<String, String> communications) {
-		this.telephone = communications.get(telegram);
-		this.skype = communications.get(skype);
-		this.viber = communications.get(viber);
-		this.whatsApp = communications.get(whatsApp);
-		this.telegram = communications.get(telegram);
+	public CommunicationsCrud(CommunicationsDto communications) {
+		this.telephone = communications.getTelephone();
+		this.skype = communications.getSkype();
+		this.viber = communications.getViber();
+		this.whatsApp = communications.getWhatsApp();
+		this.telegram = communications.getTelegram();
 	}
 
 	public String getTelephone() {

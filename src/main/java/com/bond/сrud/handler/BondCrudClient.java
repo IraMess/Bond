@@ -20,7 +20,7 @@ public class BondCrudClient implements IClient{
 
 	@Override
 	public ClientReturnCode addClient(ClientDto clientDto) {
-		if (clientRepository.findById(clientDto.getEmail()) != null) {
+		if (clientRepository.findById(clientDto.getEmail()).isPresent()) {
 			return CLIENT_ALREADY_EXISTS;
 		}
 		clientRepository.save(new ClientCrud(clientDto));

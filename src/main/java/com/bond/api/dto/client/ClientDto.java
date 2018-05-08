@@ -1,17 +1,19 @@
 package com.bond.api.dto.client;
 
+import java.util.Map;
+
 import com.bond.api.dto.common.*;
 
 public class ClientDto {
 
 	String email;
 	String name;
-	Communications communications;
+	CommunicationsDto communications;
 
 	public ClientDto() {
 	}
 
-	public ClientDto(String email, String name, Communications communications) {
+	public ClientDto(String email, String name, CommunicationsDto communications) {
 		this.email = email;
 		this.name = name;
 		this.communications = communications;
@@ -33,11 +35,11 @@ public class ClientDto {
 		this.name = name;
 	}
 
-	public Communications getCommunications() {
+	public CommunicationsDto getCommunications() {
 		return communications;
 	}
 
-	public void setCommunications(Communications communications) {
+	public void setCommunications(CommunicationsDto communications) {
 		this.communications = communications;
 	}
 }

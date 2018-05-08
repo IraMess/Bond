@@ -1,16 +1,16 @@
 package com.bond.api.dto.schedule;
 
-import com.bond.api.dto.common.Communications;
+import com.bond.api.dto.common.CommunicationsDto;
 
 public class ScheduleClientDto {
 
 	String name;
-	Communications communications;
+	CommunicationsDto communications;
 
 	public ScheduleClientDto() {
 	}
 
-	public ScheduleClientDto(String name, Communications communications) {
+	public ScheduleClientDto(String name, CommunicationsDto communications) {
 		this.name = name;
 		this.communications = communications;
 	}
@@ -23,11 +23,11 @@ public class ScheduleClientDto {
 		this.name = name;
 	}
 
-	public Communications getComunications() {
+	public CommunicationsDto getComunications() {
 		return communications;
 	}
 
-	public void setComunications(Communications comunications) {
+	public void setComunications(CommunicationsDto comunications) {
 		this.communications = comunications;
 	}
 

@@ -1,33 +1,28 @@
 package com.bond.api.dto.provider;
 
-import java.io.Serializable;
 import java.util.*;
 
 import com.bond.api.dto.common.*;
 
-public class ProviderDto implements Serializable {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 4469308217627484248L;
+public class ProviderDto {
 
 	String profession;
 	String name;
 	List<String> services;
 	AddressDto address;
-	Communications communications;
+	CommunicationsDto communications;
 	String email;
 
 	public ProviderDto() {
 	}
 
 	public ProviderDto(String profession, String name, List<String> services, AddressDto address,
-			Map<String, String> communications, String email) {
+			CommunicationsDto communications, String email) {
 		this.profession = profession;
 		this.name = name;
 		this.services = services;
 		this.address = address;
-		this.communications = new Communications(communications);
+		this.communications = communications;
 		this.email = email;
 	}
 
@@ -63,12 +58,12 @@ public class ProviderDto implements Serializable {
 		this.address = address;
 	}
 
-	public Communications getCommunications() {
+	public CommunicationsDto getCommunications() {
 		return communications;
 	}
 
-	public void setCommunications(Map<String, String> communications) {
-		this.communications = new Communications(communications);
+	public void setCommunications(CommunicationsDto communications) {
+		this.communications = communications;
 	}
 
 	public String getEmail() {

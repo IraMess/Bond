@@ -1,20 +1,16 @@
 package com.bond.сrud.entities;
 
-import java.util.*;
-
 import org.springframework.data.annotation.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.bond.api.dto.client.*;
-import com.bond.api.dto.common.Communications;
 
 @Document(collection = "clients")
 public class ClientCrud {
-
 	@Id
 	String email;
 	String name;
-	Map<String, String> communications;
+	CommunicationsCrud communications;
 
 	public ClientCrud() {
 	}
@@ -22,14 +18,7 @@ public class ClientCrud {
 	public ClientCrud(ClientDto clientDto) {
 		this.email = clientDto.getEmail();
 		this.name = clientDto.getName();
-		@SuppressWarnings("unchecked")
-		Class<Communications> comun = (Class<Communications>) clientDto.getCommunications().getClass();
-		Arrays.stream(comun.getDeclaredFields()).forEach(key -> {
-			try {
-				communications.put(key.toString(), comun.getDeclaredField(key.toString()).toString());
-			} catch (Exception e) {
-			}
-		});
+		this.communications = new CommunicationsCrud(clientDto.getCommunications());
 	}
 
 	public String getEmail() {
@@ -48,11 +37,11 @@ public class ClientCrud {
 		this.name = name;
 	}
 
-	public Map<String, String> getCommunications() {
+	public CommunicationsCrud getCommunications() {
 		return communications;
 	}
 
-	public void setCommunications(Map<String, String> communications) {
+	public void setCommunications(CommunicationsCrud communications) {
 		this.communications = communications;
 	}
 }
