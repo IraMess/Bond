@@ -1,6 +1,6 @@
 package com.bond.webService;
 
-import static com.bond.api.ProviderApiConstants.*;
+import static com.bond.api.ApiConstants.*;
 
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +13,7 @@ import com.bond.interfaces.*;
 public class ProviderController {
 
 	@Autowired
-	IProvider bonds;
+	IProvider providers;
 	@Autowired
 	ICommon commons;
 
@@ -24,6 +24,6 @@ public class ProviderController {
 
 	@PostMapping
 	ProviderReturnCode addProvider(@RequestBody ProviderDto providerDto) {
-		return bonds.addProvider(providerDto);
+		return providers.addProvider(providerDto);
 	}
 }

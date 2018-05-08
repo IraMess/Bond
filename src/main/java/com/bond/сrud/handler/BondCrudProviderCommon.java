@@ -1,27 +1,23 @@
 package com.bond.сrud.handler;
 
-import static com.bond.api.enums.ProviderReturnCode.OK;
-import static com.bond.api.enums.ProviderReturnCode.PROVIDER_ALREADY_EXISTS;
+import static com.bond.api.enums.ProviderReturnCode.*;
 
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.springframework.beans.factory.annotation.*;
+import org.springframework.stereotype.*;
 
-import com.bond.api.dto.client.ClientDto;
-import com.bond.api.dto.common.AddressDto;
-import com.bond.api.dto.provider.ProviderDto;
-import com.bond.api.dto.schedule.PatternScheduleDto;
-import com.bond.api.dto.schedule.ScheduleDto;
-import com.bond.api.enums.ProviderReturnCode;
-import com.bond.interfaces.ICommon;
-import com.bond.interfaces.IProvider;
-import com.bond.сrud.entities.ProviderCrud;
-import com.bond.сrud.repository.ProvidersRepository;
+import com.bond.api.dto.client.*;
+import com.bond.api.dto.common.*;
+import com.bond.api.dto.provider.*;
+import com.bond.api.dto.schedule.*;
+import com.bond.api.enums.*;
+import com.bond.interfaces.*;
+import com.bond.сrud.entities.*;
+import com.bond.сrud.repository.*;
 
 @Repository
-public class BondCrud implements IProvider, ICommon {
+public class BondCrudProviderCommon implements IProvider, ICommon {
 
 	@Autowired
 	ProvidersRepository providersRepository;

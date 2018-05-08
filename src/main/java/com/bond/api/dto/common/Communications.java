@@ -1,5 +1,7 @@
 package com.bond.api.dto.common;
 
+import java.util.Map;
+
 public class Communications {
 
 	String telephone;
@@ -11,12 +13,12 @@ public class Communications {
 	public Communications() {
 	}
 
-	public Communications(String telephone, String skype, String viber, String whatsApp, String telegram) {
-		this.telephone = telephone;
-		this.skype = skype;
-		this.viber = viber;
-		this.whatsApp = whatsApp;
-		this.telegram = telegram;
+	public Communications(Map<String, String> communications) {
+		this.telephone = communications.get(telegram);
+		this.skype = communications.get(skype);
+		this.viber = communications.get(viber);
+		this.whatsApp = communications.get(whatsApp);
+		this.telegram = communications.get(telegram);
 	}
 
 	public String getTelephone() {

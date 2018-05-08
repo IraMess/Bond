@@ -1,23 +1,22 @@
 package com.bond.interfaces;
 
-import com.bond.api.dto.client.ClientDto;
-import com.bond.api.dto.provider.ProviderDto;
-import com.bond.api.dto.schedule.RecordProviderDto;
-import com.bond.api.enums.ClientReturnCode;
+import com.bond.api.dto.client.*;
+import com.bond.api.dto.provider.*;
+import com.bond.api.enums.*;
 
 public interface IClient {
 	
-	ClientReturnCode addClient(ClientDto client);
-	ClientReturnCode updateClient(ClientDto client);
+	ClientReturnCode addClient(ClientDto clientDto);
+	ClientReturnCode updateClient(ClientDto clientDto);
 	ClientReturnCode deleteClient();
 	
-	Iterable<ProviderDto> getAllProviders(Long idClient);
+	Iterable<ProviderDto> getAllProviders();
 	
-	ClientReturnCode addRecord(RecordProviderDto record);
-	ClientReturnCode deleteRecord();
-	Iterable<RecordProviderDto> getAllRecords();
+	ClientReturnCode addRecord(RecordClientDto recordDto);
+	ClientReturnCode deleteRecord(RecordClientDto recordDto);
+	Iterable<RecordClientDto> getAllRecords();
 
-	ClientReturnCode addVote(int vote);
-	ClientReturnCode addComment(String comment);
+//	ClientReturnCode addVote(int vote);
+//	ClientReturnCode addComment(String comment);
 	
 }

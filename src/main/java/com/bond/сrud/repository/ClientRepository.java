@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.bond.сrud.entities.*;
 
 @Repository
-public interface ProvidersRepository extends CrudRepository<ProviderCrud, String> {
+public interface ClientRepository extends CrudRepository<ClientCrud, String>{
 
 }
