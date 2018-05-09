@@ -9,7 +9,8 @@ import com.bond.api.dto.provider.ProviderDto;
 import com.bond.api.enums.ProviderReturnCode;
 import com.bond.interfaces.*;
 
-@RestController ("/provider")
+@RestController 
+@RequestMapping ("/provider")
 public class ProviderController {
 
 	@Autowired

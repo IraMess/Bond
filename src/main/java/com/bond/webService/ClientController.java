@@ -1,4 +1,4 @@
-/*package com.bond.webService;
+package com.bond.webService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -7,7 +7,8 @@ import com.bond.api.dto.client.*;
 import com.bond.api.enums.*;
 import com.bond.interfaces.*;
 
-@RestController("/client")
+@RestController
+@RequestMapping("/client")
 public class ClientController {
 
 	@Autowired
@@ -18,4 +19,4 @@ public class ClientController {
 		return clients.addClient(clientDto);
 	}
 
-}*/
+}
