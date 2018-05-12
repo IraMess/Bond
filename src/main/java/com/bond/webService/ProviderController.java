@@ -27,4 +27,15 @@ public class ProviderController {
 	ProviderReturnCode addProvider(@RequestBody ProviderDto providerDto) {
 		return providers.addProvider(providerDto);
 	}
+	
+	@PutMapping(PROFILE)
+	ProviderReturnCode updateProvider(@RequestBody ProviderDto providerDto) {
+		return providers.updateProvider(providerDto);
+	}
+	
+	@DeleteMapping(PROFILE)
+	ProviderReturnCode deleteProvider(@RequestParam(name = EMAIL) String email) {
+		return providers.deleteProvider(email);
+	}
+	
 }

@@ -24,6 +24,9 @@ public class BondCrudProviderCommon implements IProvider, ICommon {
 
 	@Override
 	public ProviderDto getProvider(String email) {
+		if(!(providersRepository.findById(email).isPresent())) {
+			return null;
+		}
 		return toProviderDto(providersRepository.findById(email).get());
 	}
 
@@ -45,7 +48,7 @@ public class BondCrudProviderCommon implements IProvider, ICommon {
 		return new ProviderDto(profession, name, services, address, communications, email);
 	}
 
-	@Override
+	@Override 
 	public ProviderReturnCode addProvider(ProviderDto providerDto) {
 		if (providersRepository.findById(providerDto.getEmail()).isPresent()) {
 			return PROVIDER_ALREADY_EXISTS;
@@ -55,26 +58,34 @@ public class BondCrudProviderCommon implements IProvider, ICommon {
 	}
 
 	@Override
-	public ProviderReturnCode deleteProvider(Long idProvider) {
-		// TODO Auto-generated method stub
-		return null;
+	public ProviderReturnCode deleteProvider(String email) {
+		if(!(providersRepository.findById(email).isPresent())){
+			return PROVIDER_DOESNT_EXIST;
+		}
+		providersRepository.deleteById(email);
+		return PROVIDER_IS_DELETED;
 	}
 
 	@Override
 	public ProviderReturnCode updateProvider(ProviderDto providerDto) {
-		// TODO Auto-generated method stub
-		return null;
+		ProviderDto fromDBProv = toProviderDto(providersRepository.findById(providerDto.getEmail()).get());
+		if(providerDto.equals(fromDBProv)) {
+			return PROVIDER_WASNT_UPDATE;
+		}
+		
+		providersRepository.save(new ProviderCrud(providerDto));
+		return OK;
 	}
 
 	@Override
 	public Iterable<ClientDto> getClients() {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
 	@Override
 	public ClientDto getClient() {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 

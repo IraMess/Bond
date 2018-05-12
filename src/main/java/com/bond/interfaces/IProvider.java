@@ -8,7 +8,7 @@ import com.bond.api.enums.ProviderReturnCode;
 public interface IProvider {
 	
 	ProviderReturnCode addProvider(ProviderDto providerDto);
-	ProviderReturnCode deleteProvider(Long idProvider);
+	ProviderReturnCode deleteProvider(String email);
 	ProviderReturnCode updateProvider(ProviderDto providerDto);
 	
 
