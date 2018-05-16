@@ -24,9 +24,6 @@ public class BondCrudProviderCommon implements IProvider, ICommon {
 
 	@Override
 	public ProviderDto getProvider(String email) {
-		if(!(providersRepository.findById(email).isPresent())) {
-			return null;
-		}
 		return toProviderDto(providersRepository.findById(email).get());
 	}
 
